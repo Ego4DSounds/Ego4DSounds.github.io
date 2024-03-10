@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Ego4DSounds, a comprehensive dataset for sound-based egocentric scene understanding.">
+  <meta name="keywords" content="Ego4DSounds, Dataset, Egocentric, Sound, Scene Understanding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ego4DSounds</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .hero-body {
+      padding: 14rem 1.5rem; /* Increase padding to make the hero body larger */
+    }
+    .title-banner {
+      background-color: #1C2B33; /* Translucent black background */
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 60%; /* Set specific width */
+      margin: 0 auto; /* Center the banner horizontally */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Align text to the center */
+    }
+    .nav-bar {
+      background-color: #1C2B33;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .nav-bar a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.25rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .title {
+      color: white;
+      font-size: 4rem; /* Increase font size for the title */
+      padding: 0.5rem;
+    }
+    .subtitle {
+      color: white;
+      font-size: 1.3rem; /* Increase font size for the subtitle */
+    }
+    .title-subsection {
+      /* color: white; */
+      color: #1C2B33;
+      font-size: 2.25rem; /* Increase font size for the title */
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: bold;
+      }
+    .videos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* This centers the flex items on the main axis */
+      gap: 40px; /* Adjust the space between items as needed */
+    }
+    .video-item {
+      flex-basis: 24%; /* Adjust this value based on your preferred width of video items */
+      text-align: center; /* This centers the text descriptions below each video */
+    }
+    .video-item video {
+      width: 100%; /* Makes the video responsive to the size of the .video-item */
+      height: auto; /* Maintain aspect ratio */
+    }
+    .video-description {
+      margin-top: 6px; /* Space between video and its description */
+    }
+    .statistics-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: center;
+       /* background-color: #f0f0f0; Example background color */
+        padding: 30px;
+    }
+    .stat {
+        display: flex; /* Makes the stat a flex container */
+        flex-direction: column; /* Stacks children vertically */
+        justify-content: space-between; /* Distributes space between items */
+        flex: 1; /* Distribute space evenly */
+        margin: 0 20px; /* Spacing between stats */
+    }
+    .stat-number {
+        /* color: #2d6593; */
+        color: #1c71aa; 
+        font-size: 2rem;
+        font-weight: 900;
+    }
+    .stat-description {
+        color: #333; /* Dark grey text for the description */
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .stat-title {
+        display: block; /* Makes the title a block element to allow padding */
+        padding-bottom: 15px; /* Adds space below the title */
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .publications-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .publication {
+        text-align: center; /* Center the text within each publication */
+        margin-bottom: 20px; /* Add some space between publications */
+    }
+    .publication-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+    .publication-link {
+        color: #007bff; /* or your preferred color for links */
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #007bff; /* or your preferred style for links */
+        border-radius: 5px;
+        display: inline-block; /* Allows padding and border to affect layout */
+    }
+    /* Optional: Center the content within the section */
+  </style>
+
+  
+</head>
+<body>
+
+<div class="nav-bar">
+  <a href="#about">About</a>
+  <a href="#preview">Preview</a>
+  <a href="#publications">Publications</a>
+</div>
+
+<header class="hero is-bold">
+  <div class="hero-body" style="background: url('static/media/all_clips.gif') center / cover no-repeat;">
+    <div class="container has-text-centered">
+      <div class="title-banner">
+        <h1 class="title">
+          Ego4DSounds
+        </h1>
+        <h2 class="subtitle">
+          A diverse egocentric dataset with high action-audio correspondence
+        </h2>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section", id="about">
+  <div class="container">
+    <h2 class="title-subsection">About</h2>
+    <div class="content" style="font-size: 1.2rem; font-weight: 500; padding: 1rem;">
+      <p>Ego4DSounds is a subset of Ego4D, an existing large-scale egocentric video dataset. Ego4DSounds contains video clips spanning hundreds of different scenes and actions. Videos have a high action-audio correspondence, making it a high-quality dataset for action to sound generation. Clips have time-stamped narrations describing the actions performed by the camera-wearer.</p>
+    </div>
+  </div>
+
+  <div class="statistics-container">
+    <div class="stat">
+        <div class="stat-number">3,000+</div>
+        <div class="stat-title">scenarios</div>
+        <div class="stat-description">
+            Ego4DSounds contains scenes spanning a large array of daily activites, including cooking, cleaning, shopping, socializing, and more.
+        </div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">1.2 Million</div>
+        <div class="stat-title">video clips</div>
+        <div class="stat-description">
+          All videos clips capture camera-wearers performing various actions with high audio-visual correspondence.
+        </div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">950+</div>
+        <div class="stat-title">hours</div>
+        <div class="stat-description">
+            Ego4DSounds contains a large quantity of in-the-wild action clips from all over the world and text narrations.
+        </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="section", id="preview" style="background-color: rgba(0, 0, 0, 0.1)">
+  <div class="container">
+    <h2 class="title-subsection">Preview</h2>
+    <div class="videos-grid">
+      <!-- Repeat for each video -->
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/1c726086-c51a-421b-bb62-d1125db4bfe5_narration_pass_2_2678.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">puts the wheat down</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/1ea5b82f-85ab-4b05-8c55-9cc9ce9b542a_narration_pass_1_14501.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">drops the spanner on the table</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/2bc60910-3a1f-4498-a579-a1bcf105aee7_narration_pass_2_14395.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">cuts the grapes from the tree</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/3ee7070a-fe81-49a9-97a2-902268af9985_narration_pass_2_4562.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">cuts onion with a knife</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/a23b3840-0a21-4bdc-87df-b0c3b7df6bd2_narration_pass_2_13738.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">opens the drawer</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/ab22264a-91ce-4c3f-96b0-e6405a46f92f_narration_pass_2_1382.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">puts the glass in the cabinet</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/c2b3e7ea-fbeb-4491-b5bc-d0dd723496f7_narration_pass_2_7580.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">irons the trouser</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/d731d55b-a67c-498e-9016-2758185a2553_narration_pass_1_15268.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">pulls out the first dish rack from the dish dryer</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/f5c456b2-b998-4f42-82bd-786833fb3891_narration_pass_2_6.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">rinses a pan with running water from a tap</p>
+      </div>
+      <!-- More video items here -->
+    </div>
+  </div>
+</section>
+
+<section class="section publications-container" id="publications">
+  <h2 class="title-subsection">Publications</h2>
+  <div class="publication">
+      <div class="publication-title">Action2Sound: Ambient-Aware Generation of Action Sounds from Egocentric Videos</div>
+      <a href="link-to-publication-one" class="publication-link">Link coming soon!</a>
+  </div>
+  <!-- Add more publication divs as needed -->
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered" style="text-align: center;">
+      <p>
+        Webpage design inspried by <a href="https://www.robots.ox.ac.uk/~vgg/data/vggsound/">VGG-sound</a>, template from <a href="https://nerfies.github.io/">Nerfies</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
