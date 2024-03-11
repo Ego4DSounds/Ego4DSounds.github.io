@@ -134,10 +134,30 @@
         border-radius: 5px;
         display: inline-block; /* Allows padding and border to affect layout */
     }
-    /* Optional: Center the content within the section */
+    .download-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .download-link .icon {
+      color: #333;
+      margin-top: 30px; /* Increased space between the text and the icon */
+    }
+    .download-link .data-label {
+      font-weight: bold;
+      margin-top: 3px;
+      font-size: 1.3rem;
+      color: #007bff;
+    }
+    /* Hover effect */
+    .download-link:hover .icon {
+      color: #000; /* Darker color on hover */
+    }
+    .download-link:hover .data-label{
+      color: #000; /* Darker color on hover */
+    }
   </style>
 
-  
 </head>
 <body>
 
@@ -145,6 +165,7 @@
   <a href="#about">About</a>
   <a href="#preview">Preview</a>
   <a href="#publications">Publications</a>
+  <a href="#download">Download</a>
 </div>
 
 <header class="hero is-bold">
@@ -273,9 +294,25 @@
   <h2 class="title-subsection">Publications</h2>
   <div class="publication">
       <div class="publication-title">Action2Sound: Ambient-Aware Generation of Action Sounds from Egocentric Videos</div>
-      <a href="link-to-publication-one" class="publication-link">Link coming soon!</a>
+      <a href="link-to-publication-one" class="publication-link">Coming soon!</a>
   </div>
   <!-- Add more publication divs as needed -->
+</section>
+
+<section class="section" id="download" style="background-color: rgba(0, 0, 0, 0.1)">
+  <div class="container">
+    <h2 class="title-subsection">Download</h2>
+    <div class="content has-text-centered" style="font-size: 1.2rem; font-weight: 500; padding: 1rem;">
+      <p style="margin-bottom: 0;"><b>To download Ego4DSounds, we provide a GitHub Repository containing videos and metadata</b></p>
+      <p style="margin-top: 4px;"> The metadata entry for each clip contains the video ID, duration, timestamps, and narrations</p>
+      <a href="https://github.com/" target="_blank" class="download-link">
+        <span class="icon is-large">
+          <i class="fab fa-github fa-8x"></i> 
+        </span>
+        <p class="data-label">Ego4DSounds Data</p>
+      </a>
+    </div>
+  </div>
 </section>
 
 
