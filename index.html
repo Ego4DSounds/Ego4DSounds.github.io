@@ -70,7 +70,7 @@
       margin-bottom: 20px;
     }
     .video-item {
-      flex-basis: 25%; /* Adjust this value based on your preferred width of video items */
+      flex-basis: 22%; /* Adjust this value based on your preferred width of video items */
       text-align: center; /* This centers the text descriptions below each video */
     }
     .video-item video {
@@ -162,8 +162,8 @@
       width: 90%;
     }
     #preview .container{
-      max-width: 100%;
-      width: 100%;
+      max-width: 80%;
+      width: 80%;
     }
   </style>
 
@@ -228,7 +228,7 @@
 
 <section class="section", id="preview" style="background-color: rgba(0, 0, 0, 0.1)">
   <div class="container">
-    <h2 class="title-subsection">Preview</h2>
+    <h2 class="title-subsection" style="margin-bottom:15px">Preview</h2>
     <div class="videos-grid">
       <!-- Repeat for each video -->
       <div class="video-item">
@@ -293,6 +293,27 @@
           Your browser does not support the video tag.
         </video>
         <p class="video-description">rinses a pan with running water from a tap</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/0dbabadf-c3d5-4e98-bb20-ce9d930c2474_narration_pass_2_11617.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">vacuum cleans the stair</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/f9ce56a3-3e9b-4edd-b133-c05eed792ec0_narration_pass_1_744.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">puts the egg shell in a sink</p>
+      </div>
+      <div class="video-item">
+        <video controls>
+          <source src="./static/preview_clips/5d2043c0-6982-4259-88bd-b4d0fc5d789a_narration_pass_2_6338.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-description">folds the cloth</p>
       </div>
       <!-- More video items here -->
     </div>
