@@ -67,9 +67,10 @@
       flex-wrap: wrap;
       justify-content: center; /* This centers the flex items on the main axis */
       gap: 40px; /* Adjust the space between items as needed */
+      margin-bottom: 20px;
     }
     .video-item {
-      flex-basis: 24%; /* Adjust this value based on your preferred width of video items */
+      flex-basis: 25%; /* Adjust this value based on your preferred width of video items */
       text-align: center; /* This centers the text descriptions below each video */
     }
     .video-item video {
@@ -156,6 +157,14 @@
     .download-link:hover .data-label{
       color: #000; /* Darker color on hover */
     }
+    #about .container{
+      max-width: 90%;
+      width: 90%;
+    }
+    #preview .container{
+      max-width: 100%;
+      width: 100%;
+    }
   </style>
 
 </head>
@@ -186,7 +195,7 @@
 <section class="section", id="about">
   <div class="container">
     <h2 class="title-subsection">About</h2>
-    <div class="content" style="font-size: 1.2rem; font-weight: 500; padding: 1rem;">
+    <div class="content" style="font-size: 1.2rem; font-weight: 500;">
       <p>Ego4DSounds is a subset of Ego4D, an existing large-scale egocentric video dataset. Ego4DSounds contains video clips spanning hundreds of different scenes and actions. Videos have a high action-audio correspondence, making it a high-quality dataset for action to sound generation. Clips have time-stamped narrations describing the actions performed by the camera-wearer.</p>
     </div>
   </div>
